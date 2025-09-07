@@ -11,6 +11,12 @@ app.get('/', (req: Request, res: Response) => {
     res.send(process.env.OPENAI_API_KEY);
 });
 
+app.get('/api/hello', (req: Request, res: Response) => {
+    res.send({
+        "message": "hello world !!"
+    });
+});
+
 app.listen(port, () => {
     console.log(`server is running on htttp:localhost: ${port}`);
 });
